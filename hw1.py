@@ -69,6 +69,7 @@ for i in range(len(test)):
             print("case1: %s/head + %s/tail_suffix" % (headNN, sen[tailNum:]))
 
     # 해당 어절이 명사 + 접미사로 나눠지지 않는 경우
+    # 어미/조사로 분리
     if case1 == 0:
         for j in range(len(sen)):
             head = sen[:j+1]
@@ -80,7 +81,7 @@ for i in range(len(test)):
                 sum += 1
                 print("case3: %s/head + %s/tail_Josa" % (head, tail))
 
-        # 어미/조사로 나눠지지 않는 경우
+        # 어미/조사로도 나눠지지 않는 경우
         if sum == 0:
             print("case4: %s/head" % (sen))
     print("\n")
